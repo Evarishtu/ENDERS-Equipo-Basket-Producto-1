@@ -54,7 +54,7 @@ export const players: Player[] = [
     edad: 30,
     altura: 2.12,
     foto: "assets/images/jugador5.png",
-    video: "assets/videos/jugador3/video1.mp4"
+    video: "assets/videos/jugador5/video1.mp4"
   }
 ];
 
