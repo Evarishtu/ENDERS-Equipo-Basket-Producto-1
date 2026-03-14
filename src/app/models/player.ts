@@ -6,4 +6,5 @@ export interface Player {
     edad: number;
     altura: number;
     foto: string;
+    video: string;
 }

@@ -42,9 +42,12 @@
 }
 @if (view === 'plantilla'){
 <section class="background">
-    <app-players-component>
-        <!-- (playerSelected) = "selectedPlayer = $event" -->
-    </app-players-component>
+    <app-players-component (playerSelected)="selectedPlayer = $event"></app-players-component>
+    @if(selectedPlayer){
+            <app-detail-component
+                [player]="selectedPlayer">
+            </app-detail-component>
+        }
 </section>
 }
 <footer class="text-center mt-5">
