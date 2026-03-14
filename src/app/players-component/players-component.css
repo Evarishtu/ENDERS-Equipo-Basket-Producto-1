@@ -1,0 +1,15 @@
+h2{
+    font-family: var(--sans);
+    color: var(--blanco);
+}
+.player-card img{
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+}
+.player-card{
+    transition: transform 0.2s ease;
+}
+.player-card:hover{
+    transform: translateY(-5px);
+}

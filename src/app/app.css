@@ -1,0 +1,158 @@
+h1{
+    font-size: 8rem;
+    color: var(--blanco);
+    font-family: var(--sans);
+    /* font-family: "Open Sans", sans-serif; */
+}
+a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blanco);
+    font-family: var(--sans);
+    text-decoration: none;
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+header{
+    background-color: var(--azul-marino);
+}
+.nav-link-custom{
+  position: relative;
+  text-decoration: none;
+  color: var(--blanco);
+  cursor: pointer;
+}
+.nav-link-custom::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-rojo);
+  transition: width 0.3s ease;
+}
+.nav-link-custom:hover::after{
+  width: 100%;
+}
+.nav-link-custom:hover{
+  color: var(--secondary-rojo);
+  transform: translateY(-2px);
+}
+input{
+    font-size: 1.5rem;
+}
+@media( max-width: 768px){
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo{
+        width: 100px;
+    }
+}
+.background{
+    min-height: 80vh;
+    background: linear-gradient(
+        to bottom,
+        var(--primary-rojo) 0%,
+        var(--primary-rojo) 82%,
+        var(--blanco) 90%,
+        var(--blanco) 100%
+    );
+}
+.hero{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.hero-img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.hero-img img{
+  width: 1025px;
+  height: 1025px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.hero-text{
+    animation: slideIn 1s ease-out;
+}
+@media (max-width: 992px){
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-img{
+        position: relative;
+        left: 0;
+        margin-top: 40px;
+    }
+    .hero-img img{
+        width: 500px;
+        height: 500px;
+    }
+    .hero-title{
+        margin: 0;
+    }
+}
+@media (max-width: 576px){
+    h1{
+        font-size: 3rem;
+    }
+    .hero-img {
+        width: 300px;
+        height: 300px
+    }
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    nav{
+        margin-top: 10px;
+    }
+}
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translatex(80px);
+    }
+    to{
+        opacity:1;
+        transform: translatex(0);
+    }
+}
+footer{
+    background-color: var(--blanco);
+    margin: 0 0;
+}
+.logo-uoc{
+  width: 10rem;
+  height: 10rem;
+  color: black;  
+  background-image: url("/assets/logos/logo_uoc.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(96%) saturate(6285%) hue-rotate(343deg) brightness(88%) contrast(115%);
+}
+footer, p{
+    font-size: 1.5rem;
+    font-family: var(--sans);
+}
