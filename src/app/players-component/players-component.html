@@ -1,0 +1,29 @@
+<h2 class="text-center mb-5 pt-5">Conoce a nuestro equipo</h2>
+<div class="container mt-0">
+    <div class="row g-4">
+        @for(player of players; track player.id){
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+               <div class="card h-100 text-center shadow-sm player-card" (click)="selectPlayer(player)">
+                    <img [src]="player.foto"
+                    class="card-img-top"
+                    alt="foto jugador">
+                    <div class="card-body">
+                        <h5 class="card-title">{{player.nombre}} {{player.apellidos}}</h5> 
+                        <p class="card-text mb-1">
+                            <strong>Posición: </strong>{{player.posicion}}
+                        </p>
+                        <p class="card-text mb-1">
+                            <strong>Edad: </strong>{{player.edad}} años
+                        </p>
+                        <p class="card-text mb-1">
+                            <strong>Altura: </strong>{{player.altura}} m
+                        </p>     
+                    </div>
+               </div>
+            </div>
+            
+        }  
+        
+    </div>
+</div>
+
