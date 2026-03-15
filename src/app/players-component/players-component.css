@@ -2,13 +2,31 @@ h2{
     font-family: var(--sans);
     color: var(--blanco);
 }
+.players-section{
+    padding-top:40px;
+}
+.section-title{
+    font-family: var(--sans);
+    color: var(--blanco);
+}
+.filter-panel{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+}
+.players-grid{
+    margin-top: 10px;
+}
+.player-card img{
+    height: 220px;
+    object-fit: cover;
+}
 .player-card img{
     height: 220px;
     object-fit: cover;
     object-position: top;
 }
 .player-card{
-    cursor:pointer;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 .player-card:hover{
