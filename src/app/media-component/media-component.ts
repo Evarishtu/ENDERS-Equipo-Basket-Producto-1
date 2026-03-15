@@ -14,13 +14,12 @@ export class MediaComponent implements OnChanges {
 
   ngOnChanges(){
     if (this.videoPlayer){
-      const video = this.videoPlayer.nativeElement;
-      video.load();
+      this.videoPlayer.nativeElement.load();
     }
   }
   
-  restart(video: HTMLVideoElement){
-    video.currentTime = 0;
-    video.play();
-  }
+  // restart(video: HTMLVideoElement){
+  //   video.currentTime = 0;
+  //   video.play();
+  // }
 }

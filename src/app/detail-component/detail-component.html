@@ -1,23 +1,41 @@
-<div class="player-details container mt-5 player-detail">
-    <div class="card shadow-lg">
-        <div class="row g-0 align-items-center">
-            <!--Foto-->
-            <div class="col-12 col-md-4 text-center player-photo">
-                <img [src]="player?.foto" class="detail-img img-fluid">
-            </div>
-            <!--Infomación y vídeo-->
-            <div class="col-12 col-md-8">
-                <div class="card-body">
-
+<div class="player-overlay">
+    <div class="player-detail">
+        <button class="close-btn" (click)="close()">X</button>
+        <div class="card shadow-lg detail-card">
+            <div class="row g-0 align-items-center">
+                <!--Foto-->
+                <div class="col-12 col-md-4 text-center player-photo">
                     <h3 class="player-name">{{player?.nombre}} {{player?.apellidos}}</h3>
+                    <img [src]="player?.foto" class="detail-img img-fluid m-3">
                     <p><strong>Posición: </strong>{{player?.posicion}}</p>
-                    <p><strong>Edad: </strong>{{player?.edad}}</p>
-                    <p><strong>Altura: </strong>{{player?.altura}}</p>
-
-                    <div class="video-container mt-4">
-                        <app-media-component [video]="player?.video"></app-media-component>
+                    <p><strong>Edad: </strong>{{player?.edad}} años</p>
+                    <p><strong>Altura: </strong>{{player?.altura}} m</p>
+                </div>
+                <!--Infomación y vídeo-->
+                <div class="col-12 col-md-8">
+                    <div class="card-body">
+                        <div class="video-carousel" *ngIf="player?.videos?.length">
+                            <button 
+                                class="video-btn left" 
+                                (click)="prevVideo()" 
+                                *ngIf="currentVideoIndex > 0">
+                                ◀
+                            </button>
+                            <div class="carousel-window">
+                                <div class="carousel-current">
+                                    <app-media-component 
+                                        [video]="player?.videos?.[currentVideoIndex]">
+                                    </app-media-component>
+                                </div>
+                            </div>
+                            <button 
+                                class="video-btn right"
+                                (click)="nextVideo()" 
+                                *ngIf="currentVideoIndex < (player?.videos?.length ?? 0) - 1">
+                                ▶
+                            </button>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

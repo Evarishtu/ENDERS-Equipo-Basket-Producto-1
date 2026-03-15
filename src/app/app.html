@@ -45,7 +45,8 @@
     <app-players-component (playerSelected)="selectedPlayer = $event"></app-players-component>
     @if(selectedPlayer){
             <app-detail-component
-                [player]="selectedPlayer">
+                [player]="selectedPlayer"
+                (closeDetail)="selectedPlayer = null">
             </app-detail-component>
         }
 </section>
