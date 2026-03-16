@@ -20,6 +20,11 @@ export class DetailComponent {
   close(){
     this.closeDetail.emit();
   }
+
+  hasMultipleVideos(): boolean {
+    return (this.player?.videos?.length ?? 0) > 1;
+  }
+
   nextVideo(){
     if(!this.player) return;
 
