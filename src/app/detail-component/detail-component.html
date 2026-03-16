@@ -14,11 +14,11 @@
                 <!--Infomación y vídeo-->
                 <div class="col-12 col-md-8">
                     <div class="card-body">
-                        <div class="video-carousel" *ngIf="player?.videos?.length">
+                        <div class="video-carousel" if="player?.videos?.length">
                             <button 
                                 class="video-btn left" 
                                 (click)="prevVideo()" 
-                                *ngIf="currentVideoIndex > 0">
+                                if="currentVideoIndex > 0">
                                 ◀
                             </button>
                             <div class="carousel-window">
@@ -31,7 +31,7 @@
                             <button 
                                 class="video-btn right"
                                 (click)="nextVideo()" 
-                                *ngIf="currentVideoIndex < (player?.videos?.length ?? 0) - 1">
+                                if="currentVideoIndex < (player?.videos?.length ?? 0) - 1">
                                 ▶
                             </button>
                         </div>

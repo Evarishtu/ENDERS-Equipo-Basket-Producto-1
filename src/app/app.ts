@@ -1,13 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { DetailComponent } from './detail-component/detail-component';
-import { MediaComponent } from './media-component/media-component';
 import { PlayersComponent } from './players-component/players-component';
 import { Player } from './models/player';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DetailComponent, MediaComponent, PlayersComponent],
+  imports: [DetailComponent, PlayersComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

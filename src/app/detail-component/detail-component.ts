@@ -6,7 +6,7 @@ import { MediaComponent } from "../media-component/media-component";
 
 @Component({
   selector: 'app-detail-component',
-  imports: [MediaComponent, NgIf, NgFor],
+  imports: [MediaComponent],
   templateUrl: './detail-component.html',
   styleUrl: './detail-component.css',
 })
