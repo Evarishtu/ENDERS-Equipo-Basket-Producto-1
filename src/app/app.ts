@@ -15,5 +15,5 @@ export class App {
   protected readonly title = signal('equipo-basket-test');
   view = 'home';
 
-  selectedPlayer?: Player;
+  selectedPlayer?: Player | null;
 }
