@@ -34,8 +34,8 @@
     }
     <!--Fichas de jugadores-->
     <div class="row g-4 players-grid">
-        @for(player of filteredPlayers; track player.id){
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        @for(player of filteredPlayers; track player.id; let i = $index){
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 player-card-entry" [style.--card-index]="i">
                <div class="card h-100 text-center shadow-sm player-card" (click)="selectPlayer(player)">
                     <img [src]="player.foto"
                     class="card-img-top"
