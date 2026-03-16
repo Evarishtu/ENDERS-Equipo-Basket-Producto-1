@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { NgIf, NgFor } from '@angular/common';
-import { Player } from '../models/player';
-import { MediaComponent } from "../media-component/media-component";
+import { Player } from '../../models/player';
+import { MediaComponent } from '../media-component/media-component';
 
 
 @Component({

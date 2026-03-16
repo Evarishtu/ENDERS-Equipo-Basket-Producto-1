@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { DetailComponent } from './detail-component/detail-component';
-import { PlayersComponent } from './players-component/players-component';
+import { DetailComponent } from './components/detail-component/detail-component';
 import { Player } from './models/player';
+import { PlayersComponent } from './components/players-component/players-component';
 
 @Component({
   selector: 'app-root',
