@@ -15,4 +15,15 @@
 }
 body{
    background-color: var(--blanco);
+   font-family: var(--sans);
+   color: var(--azul-marino);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
 }
