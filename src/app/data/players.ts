@@ -18,7 +18,6 @@ export const players: Player[] = [
 
   {
     id: 2,
-
     nombre: "Elena",
     apellidos: "Díaz",
     posicion: "Escolta",
@@ -26,10 +25,10 @@ export const players: Player[] = [
     altura: 1.9,
     foto: "assets/images/jugador2.png",
     videos: [
-      "assets/videos/jugador3/video1.mp4",
+      "assets/videos/jugador2/video1.mp4",
       "assets/videos/jugador3/video1.mp4"
     ]
-  },
+  },  
 
   {
     id: 3,
@@ -54,7 +53,7 @@ export const players: Player[] = [
     altura: 2.05,
     foto: "assets/images/jugador4.png",
     videos: [
-      "assets/videos/jugador3/video1.mp4",
+      "assets/videos/jugador4/video1.mp4",
       "assets/videos/jugador3/video1.mp4"
     ]
   },
