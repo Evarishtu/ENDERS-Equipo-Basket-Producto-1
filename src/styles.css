@@ -18,11 +18,12 @@ body{
    font-family: var(--sans);
    color: var(--azul-marino);
 }
-
+body.model-open{
+    overflow: hidden;
+}
 *{
     box-sizing: border-box;
 }
-
 img{
     max-width: 100%;
     display: block;
